@@ -9,6 +9,7 @@ var symbols = "!@#$%^&*_-+=";
 var userCriteria = [];
 var finalPassword =[];
 
+// Write password to the #password input
 function generate(){
   do {
    var passwordLength = prompt("Please choose the length(between 8-128 characters) of your password: ")
@@ -34,24 +35,15 @@ function generate(){
       userCriteria.push(symbols) 
     }
 
-
-
-    for (let i=0; i <passwordLength; i++){
-      var randomCharacter = userCriteria
-    }[Math.floor(Math.random() * )]
-
- //loop usercriteria
-randomizing
- using password length i=0.. passwordLength
-
- Math.floor Math.random 
+  for (let i=0; i < passwordLength; i++){
+     var randomCharacter = userCriteria[Math.floor(Math.random() * userCriteria.length)];
+    
+     finalPassword.push(randomCharacter);
+    }
+      finalPassword.join("")
 
 }
 
 
+// Add event listener to generate button
 generateBtn.addEventListener("click", generate);
-
-
-
-
-
