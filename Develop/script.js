@@ -6,62 +6,52 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var symbols = "!@#$%^&*_-+=";
 
-var passwordLength = "";
-var chooseUppercase = "";
-var chooseLowercase = "";
-var chooseNumbers = "";
-var chooseSymbols = "";
-var password = "";
+var userCriteria = [];
+var finalPassword =[];
 
-// Determine password length
-function determineLength(){
-  passwordLength = prompt("Please choose the length(between 8-128 characters) of your password: ");
-      if (passwordLength <8){
-      alert("Password length must be a number more than 8 characters");
-      determineLength();
-      }else if (passwordLength >128){
-      alert("Password length must be a number less than 128 characters");
-      determineLength();
-      }else if (isNaN(passwordLength)){
-      alert("Password length must be a number between 8-128 characters");
-      determineLength();
-      }else {
-      alert("Next: Please choose the types of charaters you would like to include in your password. If you click 'Cancel' for each prompt, your password will only contain lowercase letters.");
+function generate(){
+  do {
+   var passwordLength = prompt("Please choose the length(between 8-128 characters) of your password: ")
+  }
+    while (passwordLength <= 8 || passwordLength >=128)
+
+  var lowercaseChar = confirm("Do you want to include lowercase characters?")
+    if(lowercaseChar === true){
+      userCriteria.push(lowercase) 
     }
-    return passwordLength;
+
+  var uppercaseChar = confirm("Do you want to include uppercase characters?")
+    if(uppercaseChar === true){
+      userCriteria.push(uppercase) 
+    }
+  var numberChar = confirm("Do you want to include number characters?")
+    if(numberChar === true){
+      userCriteria.push(numbers) 
+    }
+   
+  var symbolChar = confirm("Do you want to include symbol characters?")
+    if(symbolChar === true){
+      userCriteria.push(symbols) 
+    }
+
+
+
+    for (let i=0; i <passwordLength; i++){
+      var randomCharacter = userCriteria
+    }[Math.floor(Math.random() * )]
+
+ //loop usercriteria
+randomizing
+ using password length i=0.. passwordLength
+
+ Math.floor Math.random 
+
 }
 
-// Determine uppercase characters
-function determineUppercase(){
-  chooseUppercase = prompt("Do you want to include uppercase characters?")
 
-}
-
-// Determine lowercase characters
-function determineLowercase(){
-  chooseLowercase = prompt("Do you want to include lowercase characters?")
+generateBtn.addEventListener("click", generate);
 
 
-}
-
-// Determine number characters
-function determineNumbers(){
-  chooseNumbers = prompt("Do you want to include number characters?")
 
 
-}
-// Determine symbol characters
-function determineSymbols(){
-  chooseSymbols = prompt("Do you want to include symbol characters?")
 
-
-}
-
-// Create password
-function writePassword() {
-  var password = "";
-  
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
