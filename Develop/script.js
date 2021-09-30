@@ -6,8 +6,10 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var symbols = "!@#$%^&*_-+=";
 
-var userCriteria = [];
+var userCriteria = "";
 var finalPassword =[];
+
+//go back to find writePassword
 
 // Write password to the #password input
 function generate(){
@@ -18,31 +20,43 @@ function generate(){
 
   var lowercaseChar = confirm("Do you want to include lowercase characters?")
     if(lowercaseChar === true){
-      userCriteria.push(lowercase) 
+      userCriteria = userCriteria + lowercase
+      // userCriteria.push(lowercase) 
+    
     }
 
   var uppercaseChar = confirm("Do you want to include uppercase characters?")
     if(uppercaseChar === true){
-      userCriteria.push(uppercase) 
+      userCriteria = userCriteria + uppercase
+      // userCriteria.push(uppercase) 
     }
+
   var numberChar = confirm("Do you want to include number characters?")
     if(numberChar === true){
-      userCriteria.push(numbers) 
+      userCriteria = userCriteria + numbers
+      // userCriteria.push(numbers) 
     }
    
   var symbolChar = confirm("Do you want to include symbol characters?")
     if(symbolChar === true){
-      userCriteria.push(symbols) 
-    }
+      userCriteria = userCriteria + symbols
+      // userCriteria.push(symbols) 
+    } 
+    console.log(userCriteria)
 
-  for (let i=0; i < passwordLength; i++){
+ //For loop to generate user criteria password
+  for (let i = 0; i < passwordLength; i++){
      var randomCharacter = userCriteria[Math.floor(Math.random() * userCriteria.length)];
-    
+     
      finalPassword.push(randomCharacter);
+     console.log(finalPassword);
     }
-      finalPassword.join("")
 
-}
+    document.getElementById("password").value=finalPassword.join("")
+    
+
+
+  }
 
 
 // Add event listener to generate button
