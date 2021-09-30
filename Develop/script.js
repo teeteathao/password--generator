@@ -18,33 +18,32 @@ function generate(){
   }
     while (passwordLength <= 8 || passwordLength >=128)
 
-  var lowercaseChar = confirm("Do you want to include lowercase characters?")
+  var lowercaseChar = confirm("Do you want to include LOWERCASE characters?")
     if(lowercaseChar === true){
       userCriteria = userCriteria + lowercase
       // userCriteria.push(lowercase) 
-    
     }
 
-  var uppercaseChar = confirm("Do you want to include uppercase characters?")
+  var uppercaseChar = confirm("Do you want to include UPPERCASE characters?")
     if(uppercaseChar === true){
       userCriteria = userCriteria + uppercase
       // userCriteria.push(uppercase) 
     }
 
-  var numberChar = confirm("Do you want to include number characters?")
+  var numberChar = confirm("Do you want to include NUMBER characters?")
     if(numberChar === true){
       userCriteria = userCriteria + numbers
       // userCriteria.push(numbers) 
     }
    
-  var symbolChar = confirm("Do you want to include symbol characters?")
+  var symbolChar = confirm("Do you want to include SYMBOL characters?")
     if(symbolChar === true){
       userCriteria = userCriteria + symbols
       // userCriteria.push(symbols) 
     } 
-    console.log(userCriteria)
+    // console.log(userCriteria)
 
- //For loop to generate user criteria password
+  //For loop to generate user criteria password
   for (let i = 0; i < passwordLength; i++){
      var randomCharacter = userCriteria[Math.floor(Math.random() * userCriteria.length)];
      
@@ -52,7 +51,8 @@ function generate(){
      console.log(finalPassword);
     }
 
-    document.getElementById("password").value=finalPassword.join("")
+  // Password into the text field
+  document.getElementById("password").value=finalPassword.join("")
     
 
 
