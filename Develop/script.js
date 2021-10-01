@@ -41,7 +41,9 @@ function generate(){
     if(symbolChar === true){
       userCriteria = userCriteria + symbols
       // userCriteria.push(symbols) 
-    } 
+    } else{
+      alert("At least ONE criteria must be picked. \nIf you choose 'Cancel' for all, a password will not generate. \nPlease click 'Generate Password' again.");
+      }
     // console.log(userCriteria)
 
   //For loop to generate user criteria password
