@@ -1,5 +1,6 @@
 // Variables
 var generateBtn = document.querySelector("#generate");
+var generateBtn2 = document.querySelector("#copyPassword");
 
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -54,10 +55,28 @@ function generate(){
   // Password into the text field
   document.getElementById("password").value=finalPassword.join("")
     
-
-
   }
 
+// Copy password button
+function copyPassword() {
+    /* Get the text field */
+    var copyText = document.getElementById("password");
+  
+    // console.log(copyText)
+    /* Select the text field */
+    copyText.select();
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+  
+    /* Alert the copied text */
+    alert("Your generated password: " + copyText.value + " has been copied to your clipboard.");
+
+  }
+  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generate);
+
+// Add event listener to copy button
+generateBtn2.addEventListener("click", copyPassword);
