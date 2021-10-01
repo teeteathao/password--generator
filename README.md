@@ -11,9 +11,9 @@ When the “Generate Password” is clicked, a prompt will ask the following cri
   2. "Do you want to include LOWERCASE characters?"
   3. "Do you want to include UPPERCASE characters?"
   4. "Do you want to include NUMBER characters?"
-  5."Do you want to include SYMBOL characters?"
+  5. "Do you want to include SYMBOL characters?"
   
-  You must select a number between 8-128 to proceed to the next prompt. If you select 'cancel' to all the criteria, a password will not generate.
+  You must select a number between 8-128 to proceed to the next prompt. If you select 'cancel' to all the criterias, a password will not generate.
 
 
 When the "Copy Password" is clicked, the displayed generated password will copy the password to the clipboard and prompt a message indicating that the password has been copied. 
@@ -22,7 +22,7 @@ When the "Copy Password" is clicked, the displayed generated password will copy 
 
 The following image shows the web application's appearance and functionality:
 
-
+[![PWgenerator1.jpg](https://i.postimg.cc/XYF56RkN/PWgenerator1.jpg)](https://postimg.cc/HrYnQPNF)
 
 ### Deployment:
 https://teeteathao.github.io/password-generator/
