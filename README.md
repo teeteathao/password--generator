@@ -25,4 +25,4 @@ The following image shows the web application's appearance and functionality:
 [![PWgenerator1.jpg](https://i.postimg.cc/XYF56RkN/PWgenerator1.jpg)](https://postimg.cc/HrYnQPNF)
 
 ### Deployment:
-https://teeteathao.github.io/password-generator/
+https://teeteathao.github.io/password--generator/
