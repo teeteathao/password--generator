@@ -15,27 +15,31 @@ function generate(){
   do {
    var passwordLength = prompt("Please choose the length(between 8-128 characters) of your password: ")
   }
-  while (passwordLength <= 8 || passwordLength >=128)
+    while (passwordLength <= 8 || passwordLength >=128)
 
   var lowercaseChar = confirm("Do you want to include LOWERCASE characters?")
-  var uppercaseChar = confirm("Do you want to include UPPERCASE characters?")
-  var numberChar = confirm("Do you want to include NUMBER characters?")
-  var symbolChar = confirm("Do you want to include SYMBOL characters?")
-  
     if(lowercaseChar === true){
       userCriteria = userCriteria + lowercase
       // userCriteria.push(lowercase) 
-    } else if(uppercaseChar === true){
+    }
+
+  var uppercaseChar = confirm("Do you want to include UPPERCASE characters?")
+    if(uppercaseChar === true){
       userCriteria = userCriteria + uppercase
       // userCriteria.push(uppercase) 
-    } else if(numberChar === true){
+    }
+
+  var numberChar = confirm("Do you want to include NUMBER characters?")
+    if(numberChar === true){
       userCriteria = userCriteria + numbers
       // userCriteria.push(numbers) 
-    } else if(symbolChar === true){
+    }  
+   
+  var symbolChar = confirm("Do you want to include SYMBOL characters?")
+    if(symbolChar === true){
       userCriteria = userCriteria + symbols
       // userCriteria.push(symbols) 
-    } else{
-      alert("At least ONE criteria must be picked. \nIf you choose 'Cancel' for all, a password will not generate. \nPlease click 'Generate Password' again.");
+    } else{ alert("At least ONE criteria must be picked. \nIf you choose 'Cancel' for all, a password will not generate. \nPlease click 'Generate Password' again.");
       }
     // console.log(userCriteria)
   
@@ -49,7 +53,6 @@ function generate(){
 
   // Password into the text field
   document.getElementById("password").value=finalPassword.join("")
-  
   }
 
 // Copy password button
@@ -69,6 +72,7 @@ function copyPassword() {
 
   }
   
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", generate);
 
